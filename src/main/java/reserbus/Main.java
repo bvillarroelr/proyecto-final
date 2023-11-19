@@ -1,7 +1,6 @@
 package reserbus;
 
-import reserbus.UI.*;
-import java.awt.*;
+import reserbus.gui.*;
 
 public class Main {
     public static void main(String[] args) {
