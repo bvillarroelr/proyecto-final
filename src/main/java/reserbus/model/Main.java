@@ -1,4 +1,4 @@
-package reserbus;
+package reserbus.model;
 
 import reserbus.gui.*;
 
