@@ -4,13 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Ventana extends JFrame {
-    JPanel GUIManager;
+    private Menu m = new Menu();
     public Ventana() {
-        this.GUIManager = new JPanel();
         this.setLayout(new BorderLayout());
-
-        this.getContentPane().add(GUIManager);
-
+        this.add(m,BorderLayout.CENTER);
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Sistema reserbus");
