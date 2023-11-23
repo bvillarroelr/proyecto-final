@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/Asientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/Bus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
