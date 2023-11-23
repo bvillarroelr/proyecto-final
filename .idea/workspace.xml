@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/GUIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/GUIManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +38,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2Y88IhjS0kMZwV12ZPNETzVy5Sa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
