@@ -7,4 +7,10 @@ public class Asiento {
     public Asiento(int id) {
         this.id = id;
     }
+    public boolean getDisponible() {
+        return this.disponible;
+    }
+    public void setDisponible(boolean s) {
+        disponible = s;
+    }
 }
