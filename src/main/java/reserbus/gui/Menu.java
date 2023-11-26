@@ -10,6 +10,11 @@ public class Menu extends JPanel {
         this.setLayout(new GridLayout(1,2));
         this.setBackground(Color.white);
         this.add(info);
-        this.add(list);
+
+        JScrollPane scroll = new JScrollPane(list);
+        scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        this.add(scroll);
+
+
     }
 }
