@@ -5,6 +5,7 @@ public class Asiento {
     protected boolean disponible; // verifica si está disponible para reservar, o si ya está tomado (esto podría representarse por un color en la GUI)
     private float precio;
     public Asiento(int id) {
+        disponible = true;
         this.id = id;
     }
     public boolean getDisponible() {
