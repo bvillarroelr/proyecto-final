@@ -1,6 +1,9 @@
 package reserbus.model;
 
 public class Cliente {
+    private String nombre;
+    private String apellido;
+    private String rut;
     private Bus b;
     private Reserva r;
     public Cliente(Bus b) {
@@ -18,5 +21,14 @@ public class Cliente {
         else {
             return false;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", rut='" + rut + '\'' +
+                '}';
     }
 }
