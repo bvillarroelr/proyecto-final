@@ -2,7 +2,6 @@ package reserbus.model;
 
 import java.util.ArrayList;
 
-// Puede ser una clase padre que tenga subclases de cada tipo de buses
 public class Bus {
     private ArrayList<Asiento> asientos;
     private int cantidadAsientos;

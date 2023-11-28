@@ -4,7 +4,7 @@
     import java.awt.*;
 
     public class Ventana extends JFrame {
-        private Menu m = new Menu();
+        private Menu m = new Menu(this);
         private BusGUI g = new BusGUI();
         private Feedback f = new Feedback();
         public Ventana() {
@@ -17,8 +17,7 @@
             setVisible(true);
             setLocationRelativeTo(null);
         }
-        public void changePanel(JPanel c){
-            removeAll();
-            add(c);
+        public void switchPanel(JPanel panel){
+
         }
     }
