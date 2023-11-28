@@ -11,5 +11,5 @@ Sistema de reserva de buses
 Sujeto a modificaciones durante la implementación
 
 Por hacer:
-- Prototipo de la interfaz (bosquejo, etc.)
-- Seleccionar patrón de diseño
+- Subir el prototipo de interfaz
+- Implementar ventanas con información del bus (asientos, cantidad, disponibilidad, tipos, etc.)
