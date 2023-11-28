@@ -73,8 +73,12 @@ public class MenuProgram extends JPanel implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == listaBotones.get(0)) {
-            FrameAsientosBus ventanaNueva= new FrameAsientosBus();
+        int n = listaBotones.size();
+        for(int i = 0; i<n; i++) {
+            if(e.getSource() == listaBotones.get(i)) {
+                v.dispose();
+                FrameAsientosBus ventanaNueva= new FrameAsientosBus();
+            }
         }
     }
 }
