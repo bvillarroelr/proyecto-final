@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Bus {
     private ArrayList<Asiento> asientos;
     private int cantidadAsientos;
+    private String color;
+    private boolean dosPisos;
     public Bus(int cantidadAsientos) {
         asientos = new ArrayList<Asiento>();
         for(int i = 0; i<cantidadAsientos; i++) {
