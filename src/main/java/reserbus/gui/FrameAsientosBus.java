@@ -6,19 +6,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FrameAsientosBus extends JFrame implements ActionListener {
-    private JButton volverAlMenu = new JButton("Volver");
+    private BusGUI m;
+    private JButton volverAlMenu;
     public FrameAsientosBus() {
-        // Modificar layout si es necesario, solo lo hice de prueba por ahora
-        this.setSize(460,460);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLayout(new BorderLayout());
-        this.setTitle("Bus + (tipo de bus) + (destino)");
-        this.add(new JLabel("TEST"));
-        this.setVisible(true);
-
-        this.add(volverAlMenu);
-        volverAlMenu.setBounds(100,100,100,100);
-        volverAlMenu.addActionListener(this);
+        m = new BusGUI();
+        setLayout(new BorderLayout());
+        add(m,BorderLayout.CENTER);
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Sistema reserbus");
+        setSize(1080, 720);
+        setVisible(true);
+        setLocationRelativeTo(null);
     }
 
     @Override
