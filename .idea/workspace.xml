@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/bus2PisosBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/busBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" afterDir="false" />
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; e786d9c1fa3943f06512dbfcc4b4d164872d5b53
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ClienteTest">
     <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
