@@ -2,12 +2,12 @@ package reserbus.model;
 
 public class busBuilder implements Builder{
     @Override
-    public void setColor() {
+    public void setColor(Colors c) {
 
     }
 
     @Override
-    public void setPisos() {
+    public void setDosPisos(boolean b) {
 
     }
 
