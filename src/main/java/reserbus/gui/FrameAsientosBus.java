@@ -9,7 +9,7 @@ public class FrameAsientosBus extends JFrame implements ActionListener {
     private BusGUI m;
     private JButton volverAlMenu;
     public FrameAsientosBus() {
-        m = new BusGUI();
+        m = new BusGUI(this);
         setLayout(new BorderLayout());
         add(m,BorderLayout.CENTER);
         setResizable(false);

@@ -4,8 +4,9 @@
     import java.awt.*;
 
     public class Ventana extends JFrame {
+        FrameAsientosBus a;
         private Menu m = new Menu(this);
-        private BusGUI g = new BusGUI();
+        private BusGUI g = new BusGUI(a);
         private Feedback f = new Feedback();
         public Ventana() {
             setLayout(new BorderLayout());
