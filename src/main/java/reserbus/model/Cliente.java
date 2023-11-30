@@ -13,7 +13,7 @@ public class Cliente {
         return a.getDisponible();
     }
     public boolean reservarAsiento(Asiento a) { // retorna true si se pudo hacer la reserva, false en caso contrario
-        if(a.getDisponible()) {
+        if(a.getDisponible()) { 
             r = new Reserva(b,a);
             a.setDisponible(false);
             return true;
