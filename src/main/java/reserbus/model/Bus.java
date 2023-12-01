@@ -17,7 +17,7 @@ public class Bus {
         this.dosPisos = dosPisos;
         listaAsientos = new ArrayList<Asiento>();
         for(int i = 0; i<cantidadAsientos; i++) {
-            listaAsientos.add(new Asiento(i, TipoAsiento.NORMAL, Colors.RED,5000));
+            listaAsientos.add(new Asiento(i, TipoAsiento.NORMAL, Colors.RED));
         }
     }
     public Asiento getAsiento(int id) {
