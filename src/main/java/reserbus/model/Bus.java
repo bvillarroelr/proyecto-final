@@ -17,9 +17,17 @@ public class Bus {
         this.color = color;
         this.dosPisos = dosPisos;
         this.fecha = fecha;
+        if(dosPisos) {
+            cantidadAsientos = cantidadAsientos*2; // pisos en ambas plantas del bus 
+        }
         listaAsientos = new ArrayList<Asiento>();
         for(int i = 0; i<cantidadAsientos; i++) {
-            listaAsientos.add(new Asiento(i, TipoAsiento.NORMAL, Colors.RED, 5000));
+            if(i < 7) { // esto hará que los primeros 8 asientos sean SEMICAMA.
+                listaAsientos.add(new Asiento(i, TipoAsiento.SEMICAMA, Colors.YELLOW, 6000));
+            }
+            else {
+                listaAsientos.add(new Asiento(i, TipoAsiento.NORMAL, Colors.RED, 5000));
+            }
         }
     }
     public Asiento getAsiento(int id) {

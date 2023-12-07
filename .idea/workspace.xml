@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/BusBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ReservaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/bus2PisosBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/busBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +18,6 @@
         <option value="Enum" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
-        &gt;&gt;&gt;&gt;&gt;&gt;&gt; ef252a45e2bdd5435a81d140154739f17188b501
       </list>
     </option>
   </component>
@@ -58,7 +45,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -73,7 +60,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ReservaTest">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
@@ -136,8 +123,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReservaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proyecto-final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="reserbus.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="reserbus.model" />
+      <option name="MAIN_CLASS_NAME" value="reserbus.model.ReservaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReservaTest" />
         <item itemvalue="JUnit.BuilderTest" />
         <item itemvalue="JUnit.BuilderTest.buildBusSimpleTest" />
         <item itemvalue="JUnit.ClienteTest" />

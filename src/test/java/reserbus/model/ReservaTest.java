@@ -20,6 +20,6 @@ class ReservaTest {
         c.reservarAsiento(b.getAsiento(2));
         float precioTotal = c.getReserva().calculaPrecioTotal();
         // verificamos que el valor calculado es el esperado
-        assertEquals(10000, precioTotal);
+        assertEquals(12000, precioTotal);
     }
 }
