@@ -6,17 +6,23 @@ public class Asiento {
     private Colors color;
     private TipoAsiento tipo;
     private float precio;
-    public Asiento(int id, TipoAsiento tipo, float precio) {
+    public Asiento(int id, TipoAsiento tipo, Colors color) {
         disponible = true;
         this.id = id;
         this.color = color;
         this.tipo = tipo;
-        this.precio = precio;
     }
     public boolean getDisponible() {
         return this.disponible;
     }
     public void setDisponible(boolean s) {
         disponible = s;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+    public void setPrecio(float precio) {
+        this.precio = precio;
     }
 }
