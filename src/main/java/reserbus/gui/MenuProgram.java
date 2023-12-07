@@ -8,11 +8,13 @@ import java.util.ArrayList;
 
 // Lista de buses disponibles
 public class MenuProgram extends JPanel implements ActionListener {
+    private MenuInfo mi;
     private int n = 4;
     private ArrayList<JButton> listaBotones;    // De esta forma podemos acceder a los botones de manera individual.
     private Ventana v;  // Para poder hacer actionPerformed de cerrarla y abrir FrameAsientoBus cuando se clickee un botón
     private JPanel panel = new JPanel();
-    public MenuProgram(Ventana v) {
+    public MenuProgram(Ventana v,MenuInfo mi) {
+        this.mi = mi;
         this.v = v;
         panel.setLayout(new GridLayout(0,3));
         info("Codigo", panel);
@@ -24,6 +26,7 @@ public class MenuProgram extends JPanel implements ActionListener {
         for(int i = 0; i < n; i++) {    // ahora podemos acceder al boton y sus propiedades, pero nos interesa manipular su actionPerformed
             JButton boton = new JButton();
             listaBotones.add(boton);
+            //listaBotones.add(new JButton());
         }
         drawList();
     }
@@ -76,9 +79,12 @@ public class MenuProgram extends JPanel implements ActionListener {
         int n = listaBotones.size();
         for(int i = 0; i<n; i++) {
             if(e.getSource() == listaBotones.get(i)) {
-                v.dispose();
-                FrameAsientosBus ventanaNueva= new FrameAsientosBus();
+                changeInfo();
             }
         }
+    }
+    public void changeInfo() {
+        MenuBusInfo mbi = new MenuBusInfo("PLACE_HOLDER",v);
+        mi.changeBus(mbi);
     }
 }
