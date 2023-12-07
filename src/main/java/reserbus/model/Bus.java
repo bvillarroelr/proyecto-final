@@ -12,9 +12,11 @@ public class Bus {
     private String inicio;
     private String destino;
     private Date fecha;
-    public Bus(int cantidadAsientos, Colors color, boolean dosPisos, String inicio, String destino) {
+    public Bus(int cantidadAsientos, Colors color, boolean dosPisos, String inicio, String destino, Date fecha) {
+        this.cantidadAsientos = cantidadAsientos;
         this.color = color;
         this.dosPisos = dosPisos;
+        this.fecha = fecha;
         listaAsientos = new ArrayList<Asiento>();
         for(int i = 0; i<cantidadAsientos; i++) {
             listaAsientos.add(new Asiento(i, TipoAsiento.NORMAL, Colors.RED));
@@ -35,9 +37,6 @@ public class Bus {
     public int getCantidadAsientos() {
         return this.cantidadAsientos;
     }
-    public void setCantidadAsientos(int cantidadAsientos) {
-        this.cantidadAsientos = cantidadAsientos;
-    }
     public ArrayList<Asiento> getListaAsientos() {
         return listaAsientos;
     }
@@ -46,7 +45,7 @@ public class Bus {
         return dosPisos;
     }
 
-    public void setDosPisos(boolean dosPisos) {
-        this.dosPisos = dosPisos;
+    public Date getFecha() {
+        return this.fecha;
     }
 }

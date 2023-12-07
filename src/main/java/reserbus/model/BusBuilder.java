@@ -41,7 +41,7 @@ public class BusBuilder implements Builder {
     }
 
     public Bus getResult() {
-        return new Bus(cantidadAsientos, color, dosPisos, inicio, destino); // falta fecha
+        return new Bus(cantidadAsientos, color, dosPisos, inicio, destino, fecha);
     }
 
 }
