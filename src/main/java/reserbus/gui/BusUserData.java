@@ -5,8 +5,8 @@ import java.awt.event.*;
 
 public class BusUserData extends JPanel {
     JFrame f;
-    JButton reservar = new JButton("Reservar");
     JButton volver = new JButton("Volver");
+    BusUserInput ui = new BusUserInput();
 
     public BusUserData(FrameAsientosBus f) {
         this.f = f;
@@ -18,7 +18,7 @@ public class BusUserData extends JPanel {
             }
         });
         this.setLayout(new BorderLayout());
-        this.add(reservar, BorderLayout.SOUTH);
+        this.add(ui);
         this.add(volver, BorderLayout.NORTH);
     }
 }

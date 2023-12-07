@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/BusBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ReservaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Builder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/BusBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/BusBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/bus2PisosBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/busBuilder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +30,7 @@
         <option value="Enum" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        &gt;&gt;&gt;&gt;&gt;&gt;&gt; ef252a45e2bdd5435a81d140154739f17188b501
       </list>
     </option>
   </component>
@@ -43,20 +51,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "Merging main",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -65,7 +73,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuilderTest">
+  <component name="RunManager">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
