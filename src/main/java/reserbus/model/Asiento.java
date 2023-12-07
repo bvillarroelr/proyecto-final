@@ -6,8 +6,9 @@ public class Asiento {
     private Colors color;
     private TipoAsiento tipo;
     private float precio;
-    public Asiento(int id, TipoAsiento tipo, Colors color) {
+    public Asiento(int id, TipoAsiento tipo, Colors color, int precio) {
         disponible = true;
+        this.precio = precio;
         this.id = id;
         this.color = color;
         this.tipo = tipo;

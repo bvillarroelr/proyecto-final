@@ -19,7 +19,7 @@ public class Bus {
         this.fecha = fecha;
         listaAsientos = new ArrayList<Asiento>();
         for(int i = 0; i<cantidadAsientos; i++) {
-            listaAsientos.add(new Asiento(i, TipoAsiento.NORMAL, Colors.RED));
+            listaAsientos.add(new Asiento(i, TipoAsiento.NORMAL, Colors.RED, 5000));
         }
     }
     public Asiento getAsiento(int id) {

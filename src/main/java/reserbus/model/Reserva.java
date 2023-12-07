@@ -8,6 +8,7 @@ public class Reserva {
     private float precioTotal;
     public Reserva(Bus b) {
         this.b = b;
+        asientos = new ArrayList<Asiento>();
     }
     public void addAsiento(Asiento a) {
         asientos.add(a);

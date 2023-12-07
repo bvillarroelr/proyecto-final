@@ -24,6 +24,10 @@ public class Cliente {
         }
     }
 
+    public Reserva getReserva() {
+        return r;
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +
