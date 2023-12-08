@@ -17,8 +17,10 @@ public class Bus {
         this.color = color;
         this.dosPisos = dosPisos;
         this.fecha = fecha;
+        this.inicio = inicio;
+        this.destino = destino;
         if(dosPisos) {
-            cantidadAsientos = cantidadAsientos*2; // pisos en ambas plantas del bus 
+            cantidadAsientos = cantidadAsientos*2; // pisos en ambas plantas del bus
         }
         listaAsientos = new ArrayList<Asiento>();
         for(int i = 0; i<cantidadAsientos; i++) {
@@ -55,5 +57,14 @@ public class Bus {
 
     public Date getFecha() {
         return this.fecha;
+    }
+
+    @Override
+    public String toString() {
+        return "Bus{" +
+                "inicio='" + inicio + '\'' +
+                ", destino='" + destino + '\'' +
+                ", fecha=" + fecha +
+                '}';
     }
 }
