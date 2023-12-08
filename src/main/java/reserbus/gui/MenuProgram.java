@@ -1,16 +1,23 @@
 package reserbus.gui;
 
+import reserbus.model.Builder;
+import reserbus.model.Bus;
+import reserbus.model.BusBuilder;
+import reserbus.model.Director;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Date;
 
 // Lista de buses disponibles
 public class MenuProgram extends JPanel implements ActionListener {
     private MenuInfo mi;
     private int n = 4;
     private ArrayList<JButton> listaBotones;    // De esta forma podemos acceder a los botones de manera individual.
+    private ArrayList<Bus> listaBuses;          // El objetivo es lograr hacer coincidir cada botón de la lista, con un único bus asociado.
     private Ventana v;  // Para poder hacer actionPerformed de cerrarla y abrir FrameAsientoBus cuando se clickee un botón
     private JPanel panel = new JPanel();
     public MenuProgram(Ventana v,MenuInfo mi) {
@@ -20,13 +27,12 @@ public class MenuProgram extends JPanel implements ActionListener {
         info("Codigo", panel);
         info("Inicio", panel);
         info("Destino", panel);
-        // Temporalmente instancio el ArrayList desde aqui para tener un tamaño con el que trabajar, pero se podría instanciar con un for que dependa de otra variable entera por ejemplo
         listaBotones = new ArrayList<JButton>();
-
+        // creamos buses (builder)
+        listaBuses = new ArrayList<>();
+        construirBuses();
         for(int i = 0; i < n; i++) {    // ahora podemos acceder al boton y sus propiedades, pero nos interesa manipular su actionPerformed
-            JButton boton = new JButton();
-            listaBotones.add(boton);
-            //listaBotones.add(new JButton());
+            listaBotones.add(new JButton());
         }
         drawList();
     }
@@ -74,17 +80,34 @@ public class MenuProgram extends JPanel implements ActionListener {
         l.setFont(new Font("Arial", Font.BOLD, 18));
         p.add(l);
     }
+    public void construirBuses() {
+        Director d = new Director();
+        BusBuilder builder = new BusBuilder() {
+        };
+        for(int i = 0; i<n; i++) {
+            if(i<2) {
+                d.constructBusSimple(builder, "Concepción", "Santiago", new Date(2024, 1, i));
+                Bus b = builder.getResult();
+                listaBuses.add(b);
+            }
+            else {
+                d.constructBus2Pisos(builder, "Concepción", "Villarica", new Date(2024, 2, i));
+                Bus b = builder.getResult();
+                listaBuses.add(b);
+            }
+        }
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         int n = listaBotones.size();
         for(int i = 0; i<n; i++) {
             if(e.getSource() == listaBotones.get(i)) {
-                changeInfo();
+                changeInfo(listaBuses.get(i).toString());
             }
         }
     }
-    public void changeInfo() {
-        MenuBusInfo mbi = new MenuBusInfo("PLACE_HOLDER",v);
+    public void changeInfo(String s) {
+        MenuBusInfo mbi = new MenuBusInfo(s,v);
         mi.changeBus(mbi);
     }
 }
