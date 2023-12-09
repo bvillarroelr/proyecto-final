@@ -1,6 +1,5 @@
 package reserbus.gui;
 
-import reserbus.model.Builder;
 import reserbus.model.Bus;
 import reserbus.model.BusBuilder;
 import reserbus.model.Director;
@@ -9,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -89,11 +89,11 @@ public class MenuProgram extends JPanel implements ActionListener {
         };
         for (int i = 0; i < n; i++) {
             if (i < 2) {
-                d.constructBusSimple(builder, "Concepción", "Santiago", new Date(2024, 1, i));
+                d.constructBusSimpleDia(builder, "Concepción", "Santiago", new Date(2024, 1, i));
                 Bus b = builder.getResult();
                 listaBuses.add(b);
             } else {
-                d.constructBus2Pisos(builder, "Concepción", "Villarica", new Date(2024, 2, i));
+                d.constructBus2PisosDia(builder, "Concepción", "Villarica", new Date(2024, 2, i));
                 Bus b = builder.getResult();
                 listaBuses.add(b);
             }
@@ -105,13 +105,13 @@ public class MenuProgram extends JPanel implements ActionListener {
         int n = listaBotones.size();
         for (int i = 0; i < n; i++) {
             if (e.getSource() == listaBotones.get(i)) {
-                changeInfo("PH", listaBuses.get(i));
+                changeInfo(listaBuses.get(i).getLugarInicio(), listaBuses.get(i).getLugarDestino(), listaBuses.get(i).getHoraInicio(), listaBuses.get(i).getHoraDestino(), listaBuses.get(i));
             }
         }
     }
 
-    public void changeInfo(String s, Bus b) {
-        MenuBusInfo mbi = new MenuBusInfo(s,v,b);
+    public void changeInfo(String li, String ld, Time hi, Time hd, Bus b) {
+        MenuBusInfo mbi = new MenuBusInfo(li, ld, hi ,hd ,v,b);
         mi.changeBus(mbi);
     }
 }

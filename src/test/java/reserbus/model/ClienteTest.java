@@ -12,7 +12,7 @@ class ClienteTest {
         // Test de los métodos reservarAsiento() y dispAsiento()
         BusBuilder busSimple = new BusBuilder();
         Director d = new Director();
-        d.constructBusSimple(busSimple, "Conce", "Santiago", new Date(2024,2,2));
+        d.constructBusSimpleDia(busSimple, "Conce", "Santiago", new Date(2024,2,2));
         Bus b = busSimple.getResult();
         Cliente c = new Cliente(b);
         assertTrue(c.dispAsiento(b.getAsiento(0))); // Verifica el estado de un asiento vacío
@@ -23,7 +23,7 @@ class ClienteTest {
     public void reservaAsientoOcupadoTest() {
         BusBuilder busSimple = new BusBuilder();
         Director d = new Director();
-        d.constructBusSimple(busSimple, "Conce", "Santiago", new Date(2024,2,2));
+        d.constructBusSimpleDia(busSimple, "Conce", "Santiago", new Date(2024,2,2));
         Bus b = busSimple.getResult();
 
         Cliente c = new Cliente(b);

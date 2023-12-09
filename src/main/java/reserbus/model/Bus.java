@@ -63,11 +63,29 @@ public class Bus {
         return this.fecha;
     }
 
+    public String getLugarInicio() {
+        return lugarInicio;
+    }
+
+    public String getLugarDestino() {
+        return lugarDestino;
+    }
+
+    public Time getHoraInicio() {
+        return horaInicio;
+    }
+
+    public Time getHoraDestino() {
+        return horaDestino;
+    }
+
     @Override
     public String toString() {
         return "Bus{" +
-                "inicio='" + lugarInicio + horaInicio + '\'' +
-                ", destino='" + lugarDestino + horaDestino + '\'' +
+                "lugarInicio='" + lugarInicio + '\'' +
+                ", lugarDestino='" + lugarDestino + '\'' +
+                ", horaInicio=" + horaInicio +
+                ", horaDestino=" + horaDestino +
                 ", fecha=" + fecha +
                 '}';
     }

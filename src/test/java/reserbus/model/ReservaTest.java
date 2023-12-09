@@ -12,7 +12,7 @@ class ReservaTest {
         // construimos el bus
         BusBuilder busSimple = new BusBuilder();
         Director d = new Director();
-        d.constructBusSimple(busSimple, "Conce", "Santiago", new Date(2024,2,2));
+        d.constructBusSimpleDia(busSimple, "Conce", "Santiago", new Date(2024,2,2));
         Bus b = busSimple.getResult();
         // asociamos el cliente al bus
         Cliente c = new Cliente(b);
@@ -27,7 +27,7 @@ class ReservaTest {
         // construimos el bus
         BusBuilder busSimple = new BusBuilder();
         Director d = new Director();
-        d.constructBusSimple(busSimple, "Conce", "Santiago", new Date(2024,2,2));
+        d.constructBusSimpleDia(busSimple, "Conce", "Santiago", new Date(2024,2,2));
         Bus b = busSimple.getResult();
         // asociamos el cliente al bus
         Cliente c = new Cliente(b);

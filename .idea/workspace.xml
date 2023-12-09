@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuBusInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuBusInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/BusBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/BusBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/ReservaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ReservaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +67,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuilderTest">
+  <component name="RunManager">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
@@ -145,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BuilderTest" />
         <item itemvalue="JUnit.BuilderTest.buildBusSimpleTest" />
+        <item itemvalue="JUnit.BuilderTest" />
         <item itemvalue="JUnit.ClienteTest.reservaAsientoVacioTest" />
         <item itemvalue="JUnit.ReservaTest.intentarReservarAsientoOcupadoNoDeberiaCobrarse" />
         <item itemvalue="JUnit.ReservaTest" />
