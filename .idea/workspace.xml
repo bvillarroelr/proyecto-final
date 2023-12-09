@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FrameAsientosBus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/GUIManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuBusInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuBusInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/BusBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/BusBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +64,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BuilderTest">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
@@ -152,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuilderTest" />
         <item itemvalue="JUnit.BuilderTest.buildBusSimpleTest" />
         <item itemvalue="JUnit.ClienteTest.reservaAsientoVacioTest" />
         <item itemvalue="JUnit.ReservaTest.intentarReservarAsientoOcupadoNoDeberiaCobrarse" />
         <item itemvalue="JUnit.ReservaTest" />
-        <item itemvalue="JUnit.BuilderTest" />
       </list>
     </recent_temporary>
   </component>

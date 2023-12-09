@@ -1,14 +1,17 @@
 package reserbus.model;
 
 
+import java.sql.Time;
 import java.util.Date;
 
 public class BusBuilder implements Builder {
     private int cantidadAsientos;
     private Colors color;
     private boolean dosPisos;
-    private String inicio;
-    private String destino;
+    private String lugarInicio;
+    private String lugarDestino;
+    private Time horaInicio;
+    private Time horaDestino;
     private Date fecha;
     @Override
     public void setColor(Colors color) {
@@ -31,17 +34,25 @@ public class BusBuilder implements Builder {
     }
 
     @Override
-    public void setInicio(String i) {
-        this.inicio = i;
+    public void setLugarInicio(String i) {
+        this.lugarInicio = i;
     }
 
     @Override
-    public void setDestino(String d) {
-        this.destino = d;
+    public void setLugarDestino(String d) {
+        this.lugarDestino = d;
+    }
+    @Override
+    public void setHoraInicio(Time i) {
+        this.horaInicio = i;
+    }
+    @Override
+    public void setHoraDestino(Time d) {
+        this.horaDestino = d;
     }
 
     public Bus getResult() {
-        return new Bus(cantidadAsientos, color, dosPisos, inicio, destino, fecha);
+        return new Bus(cantidadAsientos, color, dosPisos, lugarInicio, lugarDestino, fecha, horaInicio, horaDestino);
     }
 
 }

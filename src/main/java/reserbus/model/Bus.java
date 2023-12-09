@@ -1,6 +1,6 @@
 package reserbus.model;
 
-import java.awt.*;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -9,16 +9,20 @@ public class Bus {
     private int cantidadAsientos;
     private Colors color;
     private boolean dosPisos;
-    private String inicio;
-    private String destino;
+    private String lugarInicio;
+    private String lugarDestino;
+    private Time horaInicio;
+    private Time horaDestino;
     private Date fecha;
-    public Bus(int cantidadAsientos, Colors color, boolean dosPisos, String inicio, String destino, Date fecha) {
+    public Bus(int cantidadAsientos, Colors color, boolean dosPisos, String lugarInicio, String lugarDestino, Date fecha, Time horaInicio, Time horaDestino) {
         this.cantidadAsientos = cantidadAsientos;
         this.color = color;
         this.dosPisos = dosPisos;
         this.fecha = fecha;
-        this.inicio = inicio;
-        this.destino = destino;
+        this.lugarInicio = lugarInicio;
+        this.lugarDestino = lugarDestino;
+        this.horaInicio = horaInicio;
+        this.horaDestino = horaDestino;
         if(dosPisos) {
             cantidadAsientos = cantidadAsientos*2; // pisos en ambas plantas del bus
         }
@@ -62,8 +66,8 @@ public class Bus {
     @Override
     public String toString() {
         return "Bus{" +
-                "inicio='" + inicio + '\'' +
-                ", destino='" + destino + '\'' +
+                "inicio='" + lugarInicio + horaInicio + '\'' +
+                ", destino='" + lugarDestino + horaDestino + '\'' +
                 ", fecha=" + fecha +
                 '}';
     }
