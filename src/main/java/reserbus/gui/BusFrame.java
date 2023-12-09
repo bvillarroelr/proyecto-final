@@ -1,15 +1,16 @@
 package reserbus.gui;
 
+import reserbus.model.*;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FrameAsientosBus extends JFrame implements ActionListener {
+public class BusFrame extends JFrame {
     private BusGUI m;
-    private JButton volverAlMenu;
-    public FrameAsientosBus() {
-        m = new BusGUI(this);
+    private Bus bus;
+    public BusFrame(Bus bus) {
+        m = new BusGUI(this,bus);
+        this.bus = bus;
         setLayout(new BorderLayout());
         add(m,BorderLayout.CENTER);
         setResizable(false);
@@ -18,12 +19,5 @@ public class FrameAsientosBus extends JFrame implements ActionListener {
         setSize(1080, 720);
         setVisible(true);
         setLocationRelativeTo(null);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == volverAlMenu) {
-            // falta hacer logica para volver a la ventana anterior
-        }
     }
 }

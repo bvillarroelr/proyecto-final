@@ -20,10 +20,11 @@ public class MenuProgram extends JPanel implements ActionListener {
     private ArrayList<Bus> listaBuses;          // El objetivo es lograr hacer coincidir cada botón de la lista, con un único bus asociado.
     private Ventana v;  // Para poder hacer actionPerformed de cerrarla y abrir FrameAsientoBus cuando se clickee un botón
     private JPanel panel = new JPanel();
-    public MenuProgram(Ventana v,MenuInfo mi) {
+
+    public MenuProgram(Ventana v, MenuInfo mi) {
         this.mi = mi;
         this.v = v;
-        panel.setLayout(new GridLayout(0,3));
+        panel.setLayout(new GridLayout(0, 3));
         info("Codigo", panel);
         info("Inicio", panel);
         info("Destino", panel);
@@ -31,20 +32,21 @@ public class MenuProgram extends JPanel implements ActionListener {
         // creamos buses (builder)
         listaBuses = new ArrayList<>();
         construirBuses();
-        for(int i = 0; i < n; i++) {    // ahora podemos acceder al boton y sus propiedades, pero nos interesa manipular su actionPerformed
+        for (int i = 0; i < n; i++) {    // ahora podemos acceder al boton y sus propiedades, pero nos interesa manipular su actionPerformed
             listaBotones.add(new JButton());
         }
         drawList();
     }
+
     public void drawList() {
         int n = listaBotones.size();
-        if(n<=6) {
+        if (n <= 6) {
             setLayout(new GridLayout(7, 1));
             add(panel);
             for (int i = 0; i < n; i++) {
                 JButton boton = new JButton();
                 boton.setPreferredSize(new Dimension(300, 100));
-                boton.setLabel("Viaje "+i);
+                boton.setLabel("Viaje " + i);
                 boton.addActionListener(this);
                 listaBotones.set(i, boton);
                 add(boton);
@@ -56,14 +58,13 @@ public class MenuProgram extends JPanel implements ActionListener {
             }
             revalidate();
             repaint();
-        }
-        else{
-            setLayout(new GridLayout(listaBotones.size()+1, 0));
+        } else {
+            setLayout(new GridLayout(listaBotones.size() + 1, 0));
             add(panel);
             for (int i = 0; i < n; i++) {
                 JButton boton = new JButton();
                 boton.setPreferredSize(new Dimension(300, 100));
-                boton.setLabel("Viaje "+i);
+                boton.setLabel("Viaje " + i);
                 boton.addActionListener(this);
                 listaBotones.set(i, boton);
                 add(boton);
@@ -72,7 +73,8 @@ public class MenuProgram extends JPanel implements ActionListener {
             repaint();
         }
     }
-    public void info(String t,JPanel p){
+
+    public void info(String t, JPanel p) {
         JLabel l = new JLabel(t);
         l.setPreferredSize(new Dimension(100, 100));
         l.setHorizontalAlignment(JLabel.CENTER);
@@ -80,34 +82,36 @@ public class MenuProgram extends JPanel implements ActionListener {
         l.setFont(new Font("Arial", Font.BOLD, 18));
         p.add(l);
     }
+
     public void construirBuses() {
         Director d = new Director();
         BusBuilder builder = new BusBuilder() {
         };
-        for(int i = 0; i<n; i++) {
-            if(i<2) {
+        for (int i = 0; i < n; i++) {
+            if (i < 2) {
                 d.constructBusSimple(builder, "Concepción", "Santiago", new Date(2024, 1, i));
                 Bus b = builder.getResult();
                 listaBuses.add(b);
-            }
-            else {
+            } else {
                 d.constructBus2Pisos(builder, "Concepción", "Villarica", new Date(2024, 2, i));
                 Bus b = builder.getResult();
                 listaBuses.add(b);
             }
         }
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         int n = listaBotones.size();
-        for(int i = 0; i<n; i++) {
-            if(e.getSource() == listaBotones.get(i)) {
-                changeInfo(listaBuses.get(i).toString());
+        for (int i = 0; i < n; i++) {
+            if (e.getSource() == listaBotones.get(i)) {
+                changeInfo("PH", listaBuses.get(i));
             }
         }
     }
-    public void changeInfo(String s) {
-        MenuBusInfo mbi = new MenuBusInfo(s,v);
+
+    public void changeInfo(String s, Bus b) {
+        MenuBusInfo mbi = new MenuBusInfo(s,v,b);
         mi.changeBus(mbi);
     }
 }

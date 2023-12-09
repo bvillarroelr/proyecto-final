@@ -1,10 +1,12 @@
 package reserbus.gui;
 
+import reserbus.model.*;
 import javax.swing.*;
 import java.awt.*;
 
 // Bienvenida y cualquier cosa extra
 public class MenuInfo extends JPanel {
+    private Bus b;
     private JLabel info;
     private MenuBusInfo mbi;
     private JPanel actual = new JPanel();

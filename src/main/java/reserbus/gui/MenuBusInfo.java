@@ -1,14 +1,17 @@
 package reserbus.gui;
 
+import reserbus.model.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MenuBusInfo extends JPanel {
-    JLabel i1,i2,i3,i4;
-    JButton reservar;
-    MenuBusInfo(String PH,Ventana v) {
+    private JLabel i1,i2,i3,i4;
+    private JButton reservar;
+    private Bus b;
+    MenuBusInfo(String PH,Ventana v,Bus b) {
+        this.b = b;
         setLayout(new GridLayout(5,1,50,100));
         this.i1 = new JLabel("   CODIGO: " + PH);
         infoFormat(i1);
@@ -28,7 +31,7 @@ public class MenuBusInfo extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 v.dispose();
-                FrameAsientosBus ventanaNueva = new FrameAsientosBus();
+                BusFrame ventanaNueva = new BusFrame(b);
             }
         });
     }

@@ -1,4 +1,5 @@
 package reserbus.gui;
+import reserbus.model.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,10 +7,11 @@ import java.awt.event.*;
 public class BusUserData extends JPanel {
     JFrame f;
     JButton volver = new JButton("Volver");
-    BusUserInput ui = new BusUserInput();
+    BusUserInput ui;
 
-    public BusUserData(FrameAsientosBus f) {
+    public BusUserData(BusFrame f,Bus bus,BusDisplay display) {
         this.f = f;
+        this.ui = new BusUserInput(bus,display);
         volver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
