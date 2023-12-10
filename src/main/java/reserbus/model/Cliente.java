@@ -23,6 +23,30 @@ public class Cliente {
             return false;   // eventualmente cambiar a un throw exception
         }
     }
+    // nos serviran para registrar los datos del cliente al reservar
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getRut() {
+        return rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
 
     public Reserva getReserva() {
         return r;
