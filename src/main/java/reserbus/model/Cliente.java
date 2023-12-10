@@ -62,6 +62,9 @@ public class Cliente {
     public void setRut(String rut) {
         this.rut = rut;
     }
+    public String getPago() {
+        return pago;
+    }
 
     public Reserva getReserva() {
         return r;

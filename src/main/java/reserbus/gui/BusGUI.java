@@ -38,7 +38,6 @@ public class BusGUI extends JPanel {
                         if (j != 2) {
                             JToggleButton button = dp.getSeatButtons()[i][j];
                             if (button.isSelected()) {
-                                System.out.println("Seat selected at position: " + i + ", " + j);
                                 if (bus.getAsiento(calcSeatPos(i,j)).getDisponible() == true) {
                                     ud.ui.reserva.addAsiento(bus.getAsiento(3 * i + j));
                                     bus.getAsiento(calcSeatPos(i,j)).setDisponible(false);
@@ -49,6 +48,10 @@ public class BusGUI extends JPanel {
                             }
                         }
                     }
+                }
+                if(ud.ui.reserva.getAsientos().isEmpty()) {
+                    ErrorFrame("Error: Ningun Asiento Seleccionado");
+                    return;
                 }
                 f.revalidate();
                 f.repaint();

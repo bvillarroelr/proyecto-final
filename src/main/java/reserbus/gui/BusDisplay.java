@@ -42,6 +42,7 @@ public class BusDisplay extends JPanel {
                             if (b.isSelected()) {
                                 b.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
                                 userdata.ui.reserva.addAsiento(bus.getAsiento(numeroAsiento));
+                                bus.getAsiento(numeroAsiento).setID(numeroAsiento);
                                 data.updateAsientos(userdata.ui.reserva.getAsientos());
                             } else {
                                 b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));

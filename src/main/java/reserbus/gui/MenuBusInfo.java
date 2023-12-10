@@ -6,14 +6,18 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Time;
+import java.util.Date;
 
 public class MenuBusInfo extends JPanel {
-    private JLabel i1,i2,i3,i4;
+    private JLabel i0,i1,i2,i3,i4;
     private JButton reservar;
     private Bus b;
-    MenuBusInfo(String ci, String cd, Time hi, Time hd, Ventana v, Bus b) {
+    MenuBusInfo(Date fe, String ci, String cd, Time hi, Time hd, Ventana v, Bus b) {
         this.b = b;
-        setLayout(new GridLayout(5,1,50,100));
+        setLayout(new GridLayout(6,1,50,80));
+        this.i0 = new JLabel("   FECHA DE VIAJE: " + fe);
+        infoFormat(i0);
+        add(i0);
         this.i1 = new JLabel("   CIUDAD DE INICIO:: " + ci);
         infoFormat(i1);
         add(i1);

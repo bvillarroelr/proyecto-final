@@ -16,7 +16,7 @@ public class Director {
     public void constructBusSimpleDia(Builder builder, String inicio, String destino, Date fecha) {
         builder.setColor(Colors.BLUE);  // buses simples seran azules
         builder.setDosPisos(false);
-        builder.setCantidadAsientos(22);
+        builder.setCantidadAsientos(20);
         builder.setFecha(fecha);
         builder.setLugarInicio(inicio);
         builder.setLugarDestino(destino);
@@ -34,7 +34,7 @@ public class Director {
     public void constructBus2PisosDia(Builder builder, String lugarInicio, String lugarDestino, Date fecha) {
         builder.setColor(Colors.RED);   // buses dos pisos seran rojos
         builder.setDosPisos(true);
-        builder.setCantidadAsientos(22); // 22 * 2 (por los dos pisos)
+        builder.setCantidadAsientos(20); // 22 * 2 (por los dos pisos)
         builder.setFecha(fecha);
         builder.setLugarInicio(lugarInicio);
         builder.setLugarDestino(lugarDestino);
