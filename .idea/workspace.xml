@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/Feedback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" afterDir="false" />
->>>>>>> 08b8e1d2f76b0ff99071e08d976bd74193d684c8
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +72,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuilderTest">
+  <component name="RunManager">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">

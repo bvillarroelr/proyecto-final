@@ -3,7 +3,10 @@ package reserbus.model;
 public class Cliente {
     private String nombre;
     private String apellido;
+    private String correo;
     private String rut;
+    private String telefono;
+    private String pago;
     private Bus b;
     private Reserva r;
     public Cliente(Bus b) {
@@ -51,7 +54,35 @@ public class Cliente {
     public Reserva getReserva() {
         return r;
     }
-
+    public void setCliente(String n, String a, String c, String r, String t, String p) throws IllegalArgumentException {
+        if (n == null || a == null || c == null || r == null || t == null || p == null) {
+            throw new IllegalArgumentException("Error: Campo/os vacios.");
+        }
+        if (n.contains(" ")) {
+            throw new IllegalArgumentException("Error: El nombre no debe contener espacios.");
+        }
+        if (a.contains(" ")) {
+            throw new IllegalArgumentException("Error: El apellido no debe contener espacios.");
+        }
+        if (!c.contains("@")) {
+            throw new IllegalArgumentException("Error: El correo debe contener un @.");
+        }
+        if (r.length() != 9 || r.charAt(8) != '-') {
+            throw new IllegalArgumentException("Error: El rut debe tener un guion y tener un largo de 9.");
+        }
+        if (t.length() != 8) {
+            throw new IllegalArgumentException("Error: El telefono debe tener 8 caracteres");
+        }
+        if (p.equals("Elige un Metodo de Pago")) {
+            throw new IllegalArgumentException("Error: Debes elegir un método de pago válido.");
+        }
+        this.nombre = n;
+        this.apellido = a;
+        this.correo = c;
+        this.rut = r;
+        this.telefono = t;
+        this.pago = p;
+    }
     @Override
     public String toString() {
         return "Cliente{" +

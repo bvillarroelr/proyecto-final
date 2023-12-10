@@ -11,13 +11,18 @@ import java.awt.event.ActionListener;
 
 public class BusDisplay extends JPanel {
     private JToggleButton[][] seatButtons;
+    private BusUserData userData;
+    private BusData data;
     private Bus bus;
-    public BusDisplay(Bus bus) {
+    public BusDisplay(Bus bus,BusUserData userdata,BusData data) {
         this.bus = bus;
+        this.userData = userdata;
+        this.data = data;
         seatButtons = new JToggleButton[5][5];
         this.setLayout(new GridLayout(5, 5, 25, 50));
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
+                final int numeroAsiento = i * 4 + j;
                 JToggleButton b;
 
                 if (j != 2) {
@@ -36,8 +41,12 @@ public class BusDisplay extends JPanel {
                         public void actionPerformed(ActionEvent e) {
                             if (b.isSelected()) {
                                 b.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
+                                userdata.ui.reserva.addAsiento(bus.getAsiento(numeroAsiento));
+                                data.updateAsientos(userdata.ui.reserva.getAsientos());
                             } else {
                                 b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
+                                userdata.ui.reserva.removeAsiento(bus.getAsiento(numeroAsiento));
+                                data.updateAsientos(userdata.ui.reserva.getAsientos());
                             }
                         }
                     });

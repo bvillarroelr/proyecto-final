@@ -12,8 +12,8 @@ public class BusGUI extends JPanel {
     private BusUserData ud;
     public BusGUI(BusFrame f,Bus bus){
         this.f = f;
-        dp = new BusDisplay(bus);
-        this.ud = new BusUserData(f,bus,dp);
+        this.ud = new BusUserData(f,bus,dp,dt);
+        dp = new BusDisplay(bus,ud,dt);
         this.setLayout(new GridLayout(0,3));
         this.add(ud);
         this.add(dp);

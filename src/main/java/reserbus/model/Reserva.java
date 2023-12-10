@@ -13,6 +13,12 @@ public class Reserva {
     public void addAsiento(Asiento a) {
         asientos.add(a);
     }
+    public void removeAsiento(Asiento asiento) {
+        asientos.remove(asiento);
+    }
+    public ArrayList<Asiento> getAsientos() {
+        return asientos;
+    }
     public float calculaPrecioTotal() {
         int n = asientos.size();
         precioTotal = 0;
