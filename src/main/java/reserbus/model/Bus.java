@@ -3,6 +3,7 @@ package reserbus.model;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Random;
 
 public class Bus {
     private ArrayList<Asiento> listaAsientos;
@@ -54,9 +55,17 @@ public class Bus {
                 listaAsientos.get(i).setTipo(TipoAsiento.CAMA);
             }
         }
+        asientosRandomizer();
     }
     public Asiento getAsiento(int id) {
         return listaAsientos.get(id);
+    }
+    public void asientosRandomizer() {
+        Random random = new Random();
+        for(int i = 0; i<cantidadAsientos/2; i++) {     // la mitad de los asientos estarán ocupados
+            int x = random.nextInt(cantidadAsientos);
+            listaAsientos.get(x).setDisponible(false);
+        }
     }
 
     public Colors getColor() {
