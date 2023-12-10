@@ -14,6 +14,19 @@ public class Bus {
     private Time horaInicio;
     private Time horaDestino;
     private Date fecha;
+
+    /**
+     * Constructor. Crea un bus con los parámetros entregados.
+     * @param cantidadAsientos
+     * @param color
+     * @param dosPisos
+     * @param lugarInicio
+     * @param lugarDestino
+     * @param fecha
+     * @param horaInicio
+     * @param horaDestino
+     */
+
     public Bus(int cantidadAsientos, Colors color, boolean dosPisos, String lugarInicio, String lugarDestino, Date fecha, Time horaInicio, Time horaDestino) {
         this.cantidadAsientos = cantidadAsientos;
         this.color = color;

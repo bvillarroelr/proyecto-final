@@ -13,9 +13,21 @@ public class Cliente {
         this.b = b;
         r = new Reserva(b);
     }
+
+    /**
+     * Permite verificar la disponibilidad del asiento entregado como parámetro. Retorna true o false.
+     * @param a Asiento
+     * @return
+     */
     public boolean dispAsiento(Asiento a) {
         return a.getDisponible();
     }
+
+    /**
+     * Reserva un asiento si se encuentra disponible, en caso de estar disponible agrega el asiento a la lista de reservas del cliente, setea el asiento como no disponible y retorna true. De lo contrario retorna false.
+     * @param a
+     * @return
+     */
     public boolean reservarAsiento(Asiento a) { // retorna true si se pudo hacer la reserva, false en caso contrario
         if(a.getDisponible()) {
             r.addAsiento(a);

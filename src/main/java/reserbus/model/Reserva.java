@@ -19,6 +19,11 @@ public class Reserva {
     public ArrayList<Asiento> getAsientos() {
         return asientos;
     }
+
+    /**
+     * Calcula y retorna el precio total a pagar, considerando la lista de reservas del cliente y el precio de cada asiento almacenado en esta.
+     * @return
+     */
     public float calculaPrecioTotal() {
         int n = asientos.size();
         precioTotal = 0;
