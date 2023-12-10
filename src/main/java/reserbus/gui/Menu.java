@@ -17,19 +17,4 @@ public class Menu extends JPanel {
         scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         this.add(scroll);
     }
-    public MenuInfo getMenuI() {
-        return menuI;
-    }
-
-    public void setMenuI(MenuInfo menuI) {
-        this.menuI = menuI;
-    }
-
-    public MenuProgram getMenuP() {
-        return menuP;
-    }
-
-    public void setMenuP(MenuProgram menuP) {
-        this.menuP = menuP;
-    }
 }

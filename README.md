@@ -17,7 +17,7 @@ Diagrama UML del modelo:
 ![ModelDiagram](ModelUMLProyectoFinal.png)
 
 Diagrama UML del GUI:
-// working
+![GUIDiagram](GuiUMLProyectoFinal.png)
 
 # Diagrama de casos de uso
 ![UCDiagram](UseCaseDiagramReserbus.png)
