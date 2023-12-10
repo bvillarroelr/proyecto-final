@@ -25,6 +25,7 @@ public class MenuProgram extends JPanel implements ActionListener {
         this.mi = mi;
         this.v = v;
         panel.setLayout(new GridLayout(0, 3));
+        panel.setBackground(new Color(216, 245, 185));
         info("Codigo", panel);
         info("Inicio", panel);
         info("Destino", panel);
@@ -46,7 +47,9 @@ public class MenuProgram extends JPanel implements ActionListener {
             for (int i = 0; i < n; i++) {
                 JButton boton = new JButton();
                 boton.setPreferredSize(new Dimension(300, 100));
-                boton.setLabel("Viaje " + i);
+                boton.setLabel("Viaje " + (i+1));
+                boton.setBackground(new Color(255, 207, 124));
+                boton.setBorder(BorderFactory.createLineBorder(Color.BLACK));
                 boton.addActionListener(this);
                 listaBotones.set(i, boton);
                 add(boton);
