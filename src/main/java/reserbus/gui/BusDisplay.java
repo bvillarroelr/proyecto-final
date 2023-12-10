@@ -1,6 +1,7 @@
 package reserbus.gui;
 
 import reserbus.model.Bus;
+import reserbus.model.TipoAsiento;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,24 +11,37 @@ import java.awt.event.ActionListener;
 
 public class BusDisplay extends JPanel {
     private JToggleButton[][] seatButtons;
-    public BusDisplay() {
+    private Bus bus;
+    public BusDisplay(Bus bus) {
+        this.bus = bus;
         seatButtons = new JToggleButton[5][5];
         this.setLayout(new GridLayout(5, 5, 25, 50));
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
+                JToggleButton b;
+
                 if (j != 2) {
-                    JToggleButton b = SeatButton("/AsientoNormal.jpg");
-                    b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
+                    if (bus.getAsiento(i * 4 + j).getTipo() == TipoAsiento.SEMICAMA) {
+                        b = SeatButton("/AsientoSemiCama.jpg");
+                    } else {
+                        b = SeatButton("/AsientoNormal.jpg");
+                    }
+                    if (bus.getAsiento(i * 4 + j).getDisponible()) {
+                        b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
+                    } else {
+                        b.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+                    }
                     b.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             if (b.isSelected()) {
-                                b.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+                                b.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
                             } else {
                                 b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
                             }
                         }
                     });
+
                     seatButtons[i][j] = b;
                     this.add(b);
                 } else {

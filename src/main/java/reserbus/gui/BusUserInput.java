@@ -11,12 +11,12 @@ public class BusUserInput extends JPanel {
     private BusDisplay display;
     private JTextField nombre, apellido, correo, rut, telefono;
     private JButton reservar = new JButton("Reservar");
-    private String[] pagos = {"Tarjeta", "Billetera Electrónica", "Efectivo al abordar"};
+    private String[] pagos = {"Elige un Metodo de Pago","Tarjeta", "Billetera Electrónica", "Efectivo al abordar"};
 
     BusUserInput(Bus bus,BusDisplay display) {
         this.bus = bus;
         this.display = display;
-        setLayout(new GridLayout(7, 1, 100, 50));
+        setLayout(new GridLayout(7, 2, 100, 50));
         nombre = new JTextField();
         apellido = new JTextField();
         correo = new JTextField();
@@ -33,7 +33,7 @@ public class BusUserInput extends JPanel {
                             JToggleButton button = display.getSeatButtons()[row][col];
                             if (button.isSelected()) {
                                 System.out.println("Seat selected at position: " + row + ", " + col);
-                                bus.getAsiento(5*row+col).setDisponible(false);
+                                bus.getAsiento(4*row+col).setDisponible(false);
                                 //Aca puede seguir codigo para cambiar cosas seleccionadas
                             }
                         }
@@ -55,13 +55,21 @@ public class BusUserInput extends JPanel {
                 System.out.println("Método de pago: " + pagoSeleccionado);
             }
         });
-
-        this.add(nombre);
-        this.add(apellido);
-        this.add(correo);
-        this.add(rut);
-        this.add(telefono);
+        this.add(createPanel(" Nombre:   ",nombre));
+        this.add(createPanel(" Apellidos: ",apellido));
+        this.add(createPanel(" Correo:     ",correo));
+        this.add(createPanel(" RUT:         ",rut));
+        this.add(createPanel(" Telefono: ",telefono));
         this.add(pago);
+
         this.add(reservar, BorderLayout.SOUTH);
+    }
+    public JPanel createPanel(String s,JTextField tf){
+        JPanel panel = new JPanel();
+        JLabel text = new JLabel(s);
+        panel.setLayout(new BorderLayout());
+        panel.add(text,BorderLayout.WEST);
+        panel.add(tf, BorderLayout.CENTER);
+        return(panel);
     }
 }

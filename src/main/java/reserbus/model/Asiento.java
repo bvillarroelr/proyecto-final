@@ -19,7 +19,9 @@ public class Asiento {
     public void setDisponible(boolean s) {
         disponible = s;
     }
-
+    public TipoAsiento getTipo(){
+        return tipo;
+    }
     public float getPrecio() {
         return precio;
     }
