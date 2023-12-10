@@ -22,6 +22,9 @@ public class Asiento {
     public TipoAsiento getTipo(){
         return tipo;
     }
+    public void setTipo(TipoAsiento t) {
+        this.tipo = t;
+    }
     public float getPrecio() {
         return precio;
     }

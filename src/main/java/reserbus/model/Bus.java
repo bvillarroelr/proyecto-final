@@ -41,11 +41,17 @@ public class Bus {
         }
         listaAsientos = new ArrayList<Asiento>();
         for(int i = 0; i<cantidadAsientos; i++) {
-            if(i < 9) { // esto hará que los primeros 8 asientos sean SEMICAMA.
+            if(i < 9) {
                 listaAsientos.add(new Asiento(i, TipoAsiento.SEMICAMA, Colors.YELLOW, 6000));
             }
             else {
                 listaAsientos.add(new Asiento(i, TipoAsiento.NORMAL, Colors.RED, 5000));
+            }
+        }
+        if(dosPisos) {
+            int totalAsientos = listaAsientos.size();
+            for(int i = totalAsientos - 8; i < totalAsientos; i++) {
+                listaAsientos.get(i).setTipo(TipoAsiento.CAMA);
             }
         }
     }

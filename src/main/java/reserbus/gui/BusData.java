@@ -9,9 +9,11 @@ public class BusData extends JPanel {
     public JPanel asientos = new JPanel();
     public JPanel total = new JPanel();
     private JLabel totalLabel;
-    public BusData() {
+    private Bus bus;
+    public BusData(Bus bus) {
+        this.bus = bus;
         setLayout(new BorderLayout());
-        info.setLayout(new GridLayout(3,1));
+        info.setLayout(new GridLayout(4,1));
         infoSetup(Color.RED,": Ocupado");
         infoSetup(Color.GRAY,": Disponible");
         infoSetup(Color.YELLOW,": Seleccionado");
@@ -37,7 +39,7 @@ public class BusData extends JPanel {
         float total = 0;
         asientos.setLayout(new GridLayout(20,0));
         for (Asiento asiento : asientosList) {
-            JLabel label = new JLabel("Asiento " + asiento.getTipo() + "      Precio: " + asiento.getPrecio());
+            JLabel label = new JLabel("Asiento " + asiento.getID() + "    Tipo: " + asiento.getTipo() + "      Precio: " + asiento.getPrecio());
             total += asiento.getPrecio();
             asientos.add(label);
         }

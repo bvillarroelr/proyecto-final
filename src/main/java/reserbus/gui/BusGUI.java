@@ -9,13 +9,14 @@ import java.awt.event.ActionListener;
 // Esta clase mostrara la informacion de un bus en terminos de reservas
 public class BusGUI extends JPanel {
     private JFrame f;
-    private BusData dt = new BusData();
+    private BusData dt;
     private BusDisplay dp;
     private BusUserData ud;
     private JPanel BusGuiPanel = new JPanel();
     private JButton reservar;
     public BusGUI(BusFrame f,Bus bus){
         this.f = f;
+        this.dt = new BusData(bus);
         this.setLayout(new BorderLayout());
         this.add(BusGuiPanel,BorderLayout.CENTER);
         this.ud = new BusUserData(f,bus,dp,dt);

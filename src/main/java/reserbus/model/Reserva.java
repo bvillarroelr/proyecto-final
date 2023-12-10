@@ -19,6 +19,9 @@ public class Reserva {
     public ArrayList<Asiento> getAsientos() {
         return asientos;
     }
+    public void clear() {
+        asientos.clear();
+    }
 
     /**
      * Calcula y retorna el precio total a pagar, considerando la lista de reservas del cliente y el precio de cada asiento almacenado en esta.

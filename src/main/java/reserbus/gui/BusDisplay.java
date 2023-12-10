@@ -1,7 +1,6 @@
 package reserbus.gui;
 
-import reserbus.model.Bus;
-import reserbus.model.TipoAsiento;
+import reserbus.model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,24 +13,66 @@ public class BusDisplay extends JPanel {
     private BusUserData userData;
     private BusData data;
     private Bus bus;
-    public BusDisplay(Bus bus,BusUserData userdata,BusData data) {
+    private int currentPiso;
+    private JToggleButton cambiar = new JToggleButton("Cambiar de piso");
+
+    public BusDisplay(Bus bus, BusUserData userdata, BusData data) {
         this.bus = bus;
         this.userData = userdata;
         this.data = data;
         seatButtons = new JToggleButton[5][5];
-        this.setLayout(new GridLayout(5, 5, 25, 50));
+        this.setLayout(new GridLayout(6, 5, 25, 50));
+        currentPiso = 0;
+
+        if (bus.isDosPisos()) {
+            drawDosPisos(data);
+            drawPiso(currentPiso);
+            add(new JLabel());
+            add(new JLabel());
+            add(cambiar);
+            add(new JLabel());
+            add(new JLabel());
+        } else {
+            drawPiso(currentPiso);
+        }
+    }
+
+    private void drawDosPisos(BusData data) {
+        cambiar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                userData.ui.reserva.clear();
+                removeAll();
+                currentPiso = (currentPiso + 1) % 2;  // Alternar entre 0 y 1
+                drawPiso(currentPiso);
+                add(new JLabel());
+                add(new JLabel());
+                add(cambiar);
+                add(new JLabel());
+                add(new JLabel());
+
+                revalidate();
+                repaint();
+            }
+        });
+        add(cambiar);
+    }
+
+    private void drawPiso(int piso) {
+        int inicioAsientos = piso * 20 + 1;  // Calcular el inicio de los asientos según el piso
+
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-                final int numeroAsiento = calcSeatPos(i,j);
+                int numeroAsiento = inicioAsientos + calcSeatPos(i, j);
                 JToggleButton b;
 
                 if (j != 2) {
-                    if (bus.getAsiento(calcSeatPos(i,j)).getTipo() == TipoAsiento.SEMICAMA) {
+                    if (bus.getAsiento(numeroAsiento).getTipo() == TipoAsiento.SEMICAMA) {
                         b = SeatButton("/AsientoSemiCama.jpg");
                     } else {
                         b = SeatButton("/AsientoNormal.jpg");
                     }
-                    if (bus.getAsiento(calcSeatPos(i,j)).getDisponible()) {
+                    if (bus.getAsiento(numeroAsiento).getDisponible()) {
                         b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
                     } else {
                         b.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
@@ -41,17 +82,16 @@ public class BusDisplay extends JPanel {
                         public void actionPerformed(ActionEvent e) {
                             if (b.isSelected()) {
                                 b.setBorder(BorderFactory.createLineBorder(Color.YELLOW, 2));
-                                userdata.ui.reserva.addAsiento(bus.getAsiento(numeroAsiento));
+                                userData.ui.reserva.addAsiento(bus.getAsiento(numeroAsiento));
                                 bus.getAsiento(numeroAsiento).setID(numeroAsiento);
-                                data.updateAsientos(userdata.ui.reserva.getAsientos());
+                                data.updateAsientos(userData.ui.reserva.getAsientos());
                             } else {
                                 b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
-                                userdata.ui.reserva.removeAsiento(bus.getAsiento(numeroAsiento));
-                                data.updateAsientos(userdata.ui.reserva.getAsientos());
+                                userData.ui.reserva.removeAsiento(bus.getAsiento(numeroAsiento));
+                                data.updateAsientos(userData.ui.reserva.getAsientos());
                             }
                         }
                     });
-
                     seatButtons[i][j] = b;
                     this.add(b);
                 } else {
@@ -59,6 +99,8 @@ public class BusDisplay extends JPanel {
                 }
             }
         }
+        revalidate();
+        repaint();
     }
 
     private JToggleButton SeatButton(String imagePath) {
@@ -71,15 +113,16 @@ public class BusDisplay extends JPanel {
         }
         return boton;
     }
+
     public JToggleButton[][] getSeatButtons() {
         return seatButtons;
     }
-    public int calcSeatPos(int i,int j) {
-        if(j<2) {
-            return i*4+j+1;
-        }
-        else {
-            return i*4+j;
+
+    public int calcSeatPos(int i, int j) {
+        if (j < 2) {
+            return i * 4 + j;
+        } else {
+            return i * 4 + j - 1;
         }
     }
 }
