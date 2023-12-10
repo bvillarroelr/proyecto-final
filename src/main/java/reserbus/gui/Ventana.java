@@ -4,7 +4,6 @@
     import java.awt.*;
 
     public class Ventana extends JFrame {
-        BusFrame a;
         private Menu m = new Menu(this);
         public Ventana() {
             setLayout(new BorderLayout());
@@ -15,8 +14,5 @@
             setSize(1080, 720);
             setVisible(true);
             setLocationRelativeTo(null);
-        }
-        public void switchPanel(JPanel panel){
-
         }
     }

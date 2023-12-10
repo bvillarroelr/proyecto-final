@@ -5,6 +5,14 @@ import java.util.Date;
 
 public class Director {
     // opción: hacer multiples construct de distintos buses, que varíen en fecha y hora del viaje (constructBusSimpleNoche, constructBusDosPisosDia, etc.)
+
+    /**
+     * Construye un bus de 1 piso en horario diurno.
+     * @param builder
+     * @param inicio
+     * @param destino
+     * @param fecha
+     */
     public void constructBusSimpleDia(Builder builder, String inicio, String destino, Date fecha) {
         builder.setColor(Colors.BLUE);  // buses simples seran azules
         builder.setDosPisos(false);
@@ -16,6 +24,13 @@ public class Director {
         builder.setHoraDestino(new Time(16,30,00));
     }
 
+    /**
+     * Construye un bus de 2 pisos en horario diurno.
+     * @param builder
+     * @param lugarInicio
+     * @param lugarDestino
+     * @param fecha
+     */
     public void constructBus2PisosDia(Builder builder, String lugarInicio, String lugarDestino, Date fecha) {
         builder.setColor(Colors.RED);   // buses dos pisos seran rojos
         builder.setDosPisos(true);

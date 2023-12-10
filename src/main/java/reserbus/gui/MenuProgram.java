@@ -15,7 +15,7 @@ import java.util.Date;
 // Lista de buses disponibles
 public class MenuProgram extends JPanel implements ActionListener {
     private MenuInfo mi;
-    private int n = 4;
+    private int n = 4;                          // Numero de botones y viajes generados 
     private ArrayList<JButton> listaBotones;    // De esta forma podemos acceder a los botones de manera individual.
     private ArrayList<Bus> listaBuses;          // El objetivo es lograr hacer coincidir cada botón de la lista, con un único bus asociado.
     private Ventana v;  // Para poder hacer actionPerformed de cerrarla y abrir FrameAsientoBus cuando se clickee un botón

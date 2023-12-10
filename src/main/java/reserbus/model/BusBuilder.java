@@ -51,6 +51,10 @@ public class BusBuilder implements Builder {
         this.horaDestino = d;
     }
 
+    /**
+     * Una vez construido por la clase directora, retorna el resultado final como un nuevo objeto Bus.
+     * @return
+     */
     public Bus getResult() {
         return new Bus(cantidadAsientos, color, dosPisos, lugarInicio, lugarDestino, fecha, horaInicio, horaDestino);
     }
