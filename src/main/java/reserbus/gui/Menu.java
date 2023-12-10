@@ -12,6 +12,7 @@ public class Menu extends JPanel {
         this.add(menuI);
         menuP = new MenuProgram(v,menuI);
         new MenuProgram(v,menuI);
+        menuI.setBackground(new Color(147,236,134));
 
         JScrollPane scroll = new JScrollPane(menuP);
         scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
