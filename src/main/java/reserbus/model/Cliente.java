@@ -59,19 +59,19 @@ public class Cliente {
             throw new IllegalArgumentException("Error: Campo/os vacios.");
         }
         if (n.contains(" ")) {
-            throw new IllegalArgumentException("Error: El nombre no debe contener espacios.");
+            throw new IllegalArgumentException("Error: El nombre no es valido.");
         }
         if (a.contains(" ")) {
-            throw new IllegalArgumentException("Error: El apellido no debe contener espacios.");
+            throw new IllegalArgumentException("Error: El apellido no es valido.");
         }
         if (!c.contains("@")) {
-            throw new IllegalArgumentException("Error: El correo debe contener un @.");
+            throw new IllegalArgumentException("Error: El correo no es valido.");
         }
-        if (r.length() != 9 || r.charAt(8) != '-') {
-            throw new IllegalArgumentException("Error: El rut debe tener un guion y tener un largo de 9.");
+        if (r.length() != 10 || r.charAt(8) != '-') {
+            throw new IllegalArgumentException("Error: El rut debe tener guion y tener un largo de 10.");
         }
         if (t.length() != 8) {
-            throw new IllegalArgumentException("Error: El telefono debe tener 8 caracteres");
+            throw new IllegalArgumentException("Error: El telefono debe tener 8 caracteres (Sin +56 o 9)");
         }
         if (p.equals("Elige un Metodo de Pago")) {
             throw new IllegalArgumentException("Error: Debes elegir un método de pago válido.");

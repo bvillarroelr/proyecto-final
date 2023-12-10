@@ -22,16 +22,16 @@ public class BusDisplay extends JPanel {
         this.setLayout(new GridLayout(5, 5, 25, 50));
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-                final int numeroAsiento = i * 4 + j;
+                final int numeroAsiento = calcSeatPos(i,j);
                 JToggleButton b;
 
                 if (j != 2) {
-                    if (bus.getAsiento(i * 4 + j).getTipo() == TipoAsiento.SEMICAMA) {
+                    if (bus.getAsiento(calcSeatPos(i,j)).getTipo() == TipoAsiento.SEMICAMA) {
                         b = SeatButton("/AsientoSemiCama.jpg");
                     } else {
                         b = SeatButton("/AsientoNormal.jpg");
                     }
-                    if (bus.getAsiento(i * 4 + j).getDisponible()) {
+                    if (bus.getAsiento(calcSeatPos(i,j)).getDisponible()) {
                         b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
                     } else {
                         b.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
@@ -72,5 +72,13 @@ public class BusDisplay extends JPanel {
     }
     public JToggleButton[][] getSeatButtons() {
         return seatButtons;
+    }
+    public int calcSeatPos(int i,int j) {
+        if(j<2) {
+            return i*4+j+1;
+        }
+        else {
+            return i*4+j;
+        }
     }
 }
