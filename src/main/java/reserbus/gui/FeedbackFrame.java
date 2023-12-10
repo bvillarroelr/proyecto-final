@@ -6,9 +6,10 @@ import java.awt.*;
 
 public class FeedbackFrame extends JFrame {
     private JPanel Feedback = new JPanel();
-    private FeedbackResult r = new FeedbackResult(this);
+    private FeedbackResult r;
     private FeedbackPay p;
     public FeedbackFrame(Cliente c) {
+        this.r = new FeedbackResult(this,c);
         this.p = new FeedbackPay(c);
         Feedback.setLayout(new GridLayout(0,2));
         Feedback.add(p);

@@ -28,4 +28,10 @@ public class Asiento {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
+    public void setID(int id) {
+        this.id = id;
+    }
+    public int getID() {
+        return id;
+    }
 }

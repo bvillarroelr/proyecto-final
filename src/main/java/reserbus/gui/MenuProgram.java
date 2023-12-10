@@ -64,7 +64,7 @@ public class MenuProgram extends JPanel implements ActionListener {
             for (int i = 0; i < n; i++) {
                 JButton boton = new JButton();
                 boton.setPreferredSize(new Dimension(300, 100));
-                boton.setLabel("Viaje " + i);
+                boton.setLabel("                          Viaje                                " + i);
                 boton.addActionListener(this);
                 listaBotones.set(i, boton);
                 add(boton);
@@ -105,13 +105,13 @@ public class MenuProgram extends JPanel implements ActionListener {
         int n = listaBotones.size();
         for (int i = 0; i < n; i++) {
             if (e.getSource() == listaBotones.get(i)) {
-                changeInfo(listaBuses.get(i).getLugarInicio(), listaBuses.get(i).getLugarDestino(), listaBuses.get(i).getHoraInicio(), listaBuses.get(i).getHoraDestino(), listaBuses.get(i));
+                changeInfo(listaBuses.get(i).getFecha(),listaBuses.get(i).getLugarInicio(), listaBuses.get(i).getLugarDestino(), listaBuses.get(i).getHoraInicio(), listaBuses.get(i).getHoraDestino(), listaBuses.get(i));
             }
         }
     }
 
-    public void changeInfo(String li, String ld, Time hi, Time hd, Bus b) {
-        MenuBusInfo mbi = new MenuBusInfo(li, ld, hi ,hd ,v,b);
+    public void changeInfo(Date fe,String li, String ld, Time hi, Time hd, Bus b) {
+        MenuBusInfo mbi = new MenuBusInfo(fe,li, ld, hi ,hd ,v,b);
         mi.changeBus(mbi);
     }
 }

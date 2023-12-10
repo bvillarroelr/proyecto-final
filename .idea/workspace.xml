@@ -8,8 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuBusInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuBusInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/MenuProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Asiento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +69,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BuilderTest">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
