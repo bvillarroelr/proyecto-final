@@ -78,7 +78,6 @@ public class Bus {
     public Time getHoraDestino() {
         return horaDestino;
     }
-
     @Override
     public String toString() {
         return "Bus{" +
