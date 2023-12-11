@@ -10,8 +10,6 @@ import java.awt.*;
 public class FeedbackFrame extends JFrame {
     private JPanel Feedback = new JPanel();
     private FeedbackResult r;
-    private FeedbackPay p;
-
     /**
      * Constructor de la clase FeedbackFrame.
      *
@@ -19,16 +17,13 @@ public class FeedbackFrame extends JFrame {
      */
     public FeedbackFrame(Cliente c) {
         this.r = new FeedbackResult(this, c);
-        this.p = new FeedbackPay(c);
-        Feedback.setLayout(new GridLayout(0, 2));
         Feedback.add(r);
-        Feedback.add(p);
         this.add(Feedback);
 
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Operación Completada");
-        setSize(1080, 720);
+        setSize(720, 480);
         setVisible(true);
         setLocationRelativeTo(null);
     }
