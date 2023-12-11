@@ -1,5 +1,8 @@
 package reserbus.model;
 
+/**
+ * Clase que simula al cliente. Es quien interactua directamente con el modelo para realizar una reserva de asientos. Posee múltiples datos personales como el nombre, apellido, rut, etc.
+ */
 public class Cliente {
     private String nombre;
     private String apellido;
