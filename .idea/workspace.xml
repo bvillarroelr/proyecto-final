@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" afterDir="false" />
-      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 3751bf15195a22b7ce0998848fa2d2ff4630373a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuilderTest">
+  <component name="RunManager">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
@@ -143,10 +140,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuilderTest" />
         <item itemvalue="JUnit.ClienteTest.reservaAsientoVacioTest" />
         <item itemvalue="JUnit.ClienteTest.reservaAsientoOcupadoTest" />
         <item itemvalue="JUnit.ClienteTest" />
-        <item itemvalue="JUnit.BuilderTest" />
         <item itemvalue="JUnit.ReservaTest" />
       </list>
     </recent_temporary>
