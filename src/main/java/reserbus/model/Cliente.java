@@ -86,9 +86,12 @@ public class Cliente {
 
     public void setCliente(String n, String a, String c, String r, String t, String p) throws IllegalArgumentException {
         if (n == null || a == null || c == null || r == null || t == null || p == null) {
-            throw new IllegalArgumentException("Error: Campo/os vacios.");
+            throw new IllegalArgumentException("Error: No se ha encontrado entradas del Usuario");
         }
-        if (n.contains(" ")) {
+        if (n.trim().isEmpty() || a.trim().isEmpty()) {
+            throw new IllegalArgumentException("Error: Campo/os vacios");
+        }
+        if (n==null || n.contains(" ")) {
             throw new IllegalArgumentException("Error: El nombre no es valido.");
         }
         if (a.contains(" ")) {

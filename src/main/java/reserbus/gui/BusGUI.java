@@ -5,6 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Clase JPanel que contiene mas JPanels con sus secciones y campos para la reserva.
@@ -43,14 +45,17 @@ public class BusGUI extends JPanel {
                 if (cliente == null) {
                     return;
                 }
+
+                List<Asiento> asientosReservados = new ArrayList<>();
+
                 for (int i = 0; i < dp.getSeatButtons().length; i++) {
                     for (int j = 0; j < dp.getSeatButtons()[i].length; j++) {
                         if (j != 2) {
                             JToggleButton button = dp.getSeatButtons()[i][j];
                             if (button.isSelected()) {
-                                if (bus.getAsiento(calcSeatPos(i, j)).getDisponible()) {
-                                    ud.ui.reserva.addAsiento(bus.getAsiento(calcSeatPos(i, j)));
-                                    bus.getAsiento(calcSeatPos(i, j)).setDisponible(false);
+                                Asiento asiento = bus.getAsiento(calcSeatPos(i, j));
+                                if (asiento.getDisponible()) {
+                                    asientosReservados.add(asiento);
                                 } else {
                                     ErrorFrame("Error: Uno de los asientos seleccionados no está disponible");
                                     return;
@@ -59,10 +64,18 @@ public class BusGUI extends JPanel {
                         }
                     }
                 }
-                if (ud.ui.reserva.getAsientos().isEmpty()) {
+
+                if (asientosReservados.isEmpty()) {
                     ErrorFrame("Error: Ningún asiento seleccionado");
                     return;
                 }
+
+                // Si llegamos aquí, todos los asientos están disponibles, podemos marcarlos como ocupados
+                for (Asiento asiento : asientosReservados) {
+                    asiento.setDisponible(false);
+                    ud.ui.reserva.addAsiento(asiento);
+                }
+
                 f.revalidate();
                 f.repaint();
                 FeedbackFrame newFrame = new FeedbackFrame(cliente);
