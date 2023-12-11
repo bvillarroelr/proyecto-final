@@ -6,18 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/BusUserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Reserva.java" afterDir="false" />
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt; c6dd84b34607f008f2b637d4ad83ab356f28542f
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +62,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BuilderTest">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
