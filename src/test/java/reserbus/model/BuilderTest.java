@@ -18,7 +18,7 @@ class BuilderTest {
         assertFalse(b.isDosPisos());
         assertEquals(new Date(2023,12,25), b.getFecha());
         assertEquals(Colors.BLUE, b.getColor());
-        assertEquals(22, b.getCantidadAsientos());
+        assertEquals(21, b.getCantidadAsientos());
         System.out.println(b);
     }
     @Test

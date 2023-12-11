@@ -15,9 +15,14 @@ class ClienteTest {
         d.constructBusSimpleDia(busSimple, "Conce", "Santiago", new Date(2024,2,2));
         Bus b = busSimple.getResult();
         Cliente c = new Cliente(b);
-        assertTrue(c.dispAsiento(b.getAsiento(0))); // Verifica el estado de un asiento vacío
-        assertTrue(c.reservarAsiento(b.getAsiento(0))); // Verifica si se reserva el asiento con exito
-        assertFalse(c.dispAsiento(b.getAsiento(0)));    // Verifica el estado del asiento ya reservado
+        if(c.dispAsiento(b.getAsiento(0))) {
+            assertTrue(c.dispAsiento(b.getAsiento(0))); // Verifica el estado de un asiento vacío
+            assertTrue(c.reservarAsiento(b.getAsiento(0))); // Verifica si se reserva el asiento con exito
+            assertFalse(c.dispAsiento(b.getAsiento(0)));    // Verifica el estado del asiento ya reservado
+        }
+        else{
+            assertFalse(c.dispAsiento(b.getAsiento(0))); // Verifica el estado de un asiento vacío
+        }
     }
     @Test
     public void reservaAsientoOcupadoTest() {

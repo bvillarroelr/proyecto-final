@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f14d2a09-ce84-493c-9f34-d8ac7240f414" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackPay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/gui/FeedbackResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reserbus/model/Director.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/BuilderTest.java" afterDir="false" />
-      &gt;&gt;&gt;&gt;&gt;&gt;&gt; 5313b935d9c146ac8f0988387250ba248241c3ac
+      <change beforePath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reserbus/model/ClienteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +62,7 @@
       <recent name="reserbus.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuilderTest">
+  <component name="RunManager">
     <configuration name="BuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
@@ -83,7 +78,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BuilderTest.buildBusSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto-final" />
       <extension name="coverage">
         <pattern>
@@ -92,8 +87,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="reserbus.model" />
-      <option name="MAIN_CLASS_NAME" value="reserbus.model.BuilderTest" />
-      <option name="METHOD_NAME" value="buildBusSimpleTest" />
+      <option name="MAIN_CLASS_NAME" value="reserbus.model.ClienteTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteTest.reservaAsientoOcupadoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proyecto-final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="reserbus.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="reserbus.model" />
+      <option name="MAIN_CLASS_NAME" value="reserbus.model.ClienteTest" />
+      <option name="METHOD_NAME" value="reservaAsientoOcupadoTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,28 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReservaTest.intentarReservarAsientoOcupadoNoDeberiaCobrarse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="proyecto-final" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="reserbus.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="reserbus.model" />
-      <option name="MAIN_CLASS_NAME" value="reserbus.model.ReservaTest" />
-      <option name="METHOD_NAME" value="intentarReservarAsientoOcupadoNoDeberiaCobrarse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BuilderTest" />
-        <item itemvalue="JUnit.BuilderTest.buildBusSimpleTest" />
         <item itemvalue="JUnit.ClienteTest.reservaAsientoVacioTest" />
-        <item itemvalue="JUnit.ReservaTest.intentarReservarAsientoOcupadoNoDeberiaCobrarse" />
+        <item itemvalue="JUnit.ClienteTest.reservaAsientoOcupadoTest" />
+        <item itemvalue="JUnit.ClienteTest" />
+        <item itemvalue="JUnit.BuilderTest" />
         <item itemvalue="JUnit.ReservaTest" />
       </list>
     </recent_temporary>
