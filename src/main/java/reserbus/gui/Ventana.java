@@ -2,7 +2,9 @@
 
     import javax.swing.*;
     import java.awt.*;
-
+    /**
+     * Clase que representa la ventana principal del sistema Reserbus.
+     */
     public class Ventana extends JFrame {
         private Menu m = new Menu(this);
         public Ventana() {

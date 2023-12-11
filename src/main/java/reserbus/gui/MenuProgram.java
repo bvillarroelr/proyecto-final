@@ -1,9 +1,6 @@
 package reserbus.gui;
 
-import reserbus.model.Bus;
-import reserbus.model.BusBuilder;
-import reserbus.model.Director;
-
+import reserbus.model.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,15 +9,23 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
-// Lista de buses disponibles
+/**
+ * Clase que representa la lista de buses disponibles en el menú.
+ */
 public class MenuProgram extends JPanel implements ActionListener {
     private MenuInfo mi;
-    private int n = 4;                          // Numero de botones y viajes generados 
-    private ArrayList<JButton> listaBotones;    // De esta forma podemos acceder a los botones de manera individual.
-    private ArrayList<Bus> listaBuses;          // El objetivo es lograr hacer coincidir cada botón de la lista, con un único bus asociado.
-    private Ventana v;  // Para poder hacer actionPerformed de cerrarla y abrir FrameAsientoBus cuando se clickee un botón
+    private int n = 4;
+    private ArrayList<JButton> listaBotones;
+    private ArrayList<Bus> listaBuses;
+    private Ventana v;
     private JPanel panel = new JPanel();
 
+    /**
+     * Constructor de la clase MenuProgram.
+     *
+     * @param v  Referencia al Objeto de la clase Ventana.
+     * @param mi Referencia al Objeto de la clase MenuInfo.
+     */
     public MenuProgram(Ventana v, MenuInfo mi) {
         this.mi = mi;
         this.v = v;
@@ -30,15 +35,17 @@ public class MenuProgram extends JPanel implements ActionListener {
         info("Inicio", panel);
         info("Destino", panel);
         listaBotones = new ArrayList<JButton>();
-        // creamos buses (builder)
         listaBuses = new ArrayList<>();
         construirBuses();
-        for (int i = 0; i < n; i++) {    // ahora podemos acceder al boton y sus propiedades, pero nos interesa manipular su actionPerformed
+        for (int i = 0; i < n; i++) {
             listaBotones.add(new JButton());
         }
         drawList();
     }
 
+    /**
+     * Dibuja la lista de buses en el menú.
+     */
     public void drawList() {
         int n = listaBotones.size();
         if (n <= 6) {
@@ -47,7 +54,7 @@ public class MenuProgram extends JPanel implements ActionListener {
             for (int i = 0; i < n; i++) {
                 JButton boton = new JButton();
                 boton.setPreferredSize(new Dimension(300, 100));
-                boton.setLabel("Viaje " + (i+1));
+                boton.setLabel("Viaje " + (i + 1));
                 boton.setBackground(new Color(255, 207, 124));
                 boton.setBorder(BorderFactory.createLineBorder(Color.BLACK));
                 boton.addActionListener(this);
@@ -77,6 +84,12 @@ public class MenuProgram extends JPanel implements ActionListener {
         }
     }
 
+    /**
+     * Agrega información al panel.
+     *
+     * @param t Texto a agregar.
+     * @param p Panel al que se agrega la información.
+     */
     public void info(String t, JPanel p) {
         JLabel l = new JLabel(t);
         l.setPreferredSize(new Dimension(100, 100));
@@ -86,6 +99,9 @@ public class MenuProgram extends JPanel implements ActionListener {
         p.add(l);
     }
 
+    /**
+     * Construye los buses utilizando el patrón Builder.
+     */
     public void construirBuses() {
         Director d = new Director();
         BusBuilder builder = new BusBuilder() {
@@ -96,7 +112,7 @@ public class MenuProgram extends JPanel implements ActionListener {
                 Bus b = builder.getResult();
                 listaBuses.add(b);
             } else {
-                d.constructBus2PisosDia(builder, "Concepción", "Villarica", new Date(2024, 2, i));
+                d.constructBus2PisosDia(builder, "Concepción", "Villarrica", new Date(2024, 2, i));
                 Bus b = builder.getResult();
                 listaBuses.add(b);
             }
@@ -108,13 +124,23 @@ public class MenuProgram extends JPanel implements ActionListener {
         int n = listaBotones.size();
         for (int i = 0; i < n; i++) {
             if (e.getSource() == listaBotones.get(i)) {
-                changeInfo(listaBuses.get(i).getFecha(),listaBuses.get(i).getLugarInicio(), listaBuses.get(i).getLugarDestino(), listaBuses.get(i).getHoraInicio(), listaBuses.get(i).getHoraDestino(), listaBuses.get(i));
+                changeInfo(listaBuses.get(i).getFecha(), listaBuses.get(i).getLugarInicio(), listaBuses.get(i).getLugarDestino(), listaBuses.get(i).getHoraInicio(), listaBuses.get(i).getHoraDestino(), listaBuses.get(i));
             }
         }
     }
 
-    public void changeInfo(Date fe,String li, String ld, Time hi, Time hd, Bus b) {
-        MenuBusInfo mbi = new MenuBusInfo(fe,li, ld, hi ,hd ,v,b);
+    /**
+     * Cambia la información en el panel de información.
+     *
+     * @param fe Fecha de viaje.
+     * @param li Ciudad de inicio.
+     * @param ld Ciudad de destino.
+     * @param hi Hora de inicio.
+     * @param hd Hora de destino.
+     * @param b  Objeto de la clase Bus.
+     */
+    public void changeInfo(Date fe, String li, String ld, Time hi, Time hd, Bus b) {
+        MenuBusInfo mbi = new MenuBusInfo(fe, li, ld, hi, hd, v, b);
         mi.changeBus(mbi);
     }
 }

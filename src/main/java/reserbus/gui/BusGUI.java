@@ -53,7 +53,7 @@ public class BusGUI extends JPanel {
                                     bus.getAsiento(calcSeatPos(i, j)).setDisponible(false);
                                 } else {
                                     ErrorFrame("Error: Uno de los asientos seleccionados no está disponible");
-                                    break;
+                                    return;
                                 }
                             }
                         }

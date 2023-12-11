@@ -105,7 +105,12 @@ public class BusDisplay extends JPanel {
                                 bus.getAsiento(numeroAsiento).setID(numeroAsiento);
                                 data.updateAsientos(userData.ui.reserva.getAsientos());
                             } else {
-                                b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
+                                if(bus.getAsiento(numeroAsiento).getDisponible() == false) {
+                                    b.setBorder(BorderFactory.createLineBorder(Color.RED, 2));
+                                }
+                                else {
+                                    b.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
+                                }
                                 userData.ui.reserva.removeAsiento(bus.getAsiento(numeroAsiento));
                                 data.updateAsientos(userData.ui.reserva.getAsientos());
                             }
