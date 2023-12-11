@@ -14,8 +14,15 @@ public class BusDisplay extends JPanel {
     private BusData data;
     private Bus bus;
     private int currentPiso;
-    private JToggleButton cambiar = new JToggleButton("Cambiar de piso");
+    private JToggleButton cambiar = new JToggleButton("2");
 
+    /**
+     * Constructor de la clase BusDisplay.
+     *
+     * @param bus     Bus asociado al display.
+     * @param userdata Referencia a BusUserData para manejar los datos del usuario.
+     * @param data    Referencia a BusData para sincronizar con las selecciones.
+     */
     public BusDisplay(Bus bus, BusUserData userdata, BusData data) {
         this.bus = bus;
         this.userData = userdata;
@@ -37,13 +44,18 @@ public class BusDisplay extends JPanel {
         }
     }
 
+    /**
+     * Dibuja la interfaz gráfica para un caso bus de dos pisos y añade la funcionalidad para cambiar entre pisos.
+     *
+     * @param data Referencia a objeto BusData para manejar la información sobre los asientos y el precio total.
+     */
     private void drawDosPisos(BusData data) {
         cambiar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 userData.ui.reserva.clear();
                 removeAll();
-                currentPiso = (currentPiso + 1) % 2;  // Alternar entre 0 y 1
+                currentPiso = (currentPiso + 1) % 2;
                 drawPiso(currentPiso);
                 add(new JLabel());
                 add(new JLabel());
@@ -58,6 +70,11 @@ public class BusDisplay extends JPanel {
         add(cambiar);
     }
 
+    /**
+     * Dibuja la interfaz gráfica para un piso del bus, mostrando los asientos y permitiendo la selección.
+     *
+     * @param piso Número del piso a dibujar (0 o 1 para un bus de dos pisos, 0 para un bus de un piso).
+     */
     private void drawPiso(int piso) {
         int inicioAsientos = piso * 20 + 1;  // Calcular el inicio de los asientos según el piso
 
@@ -69,6 +86,8 @@ public class BusDisplay extends JPanel {
                 if (j != 2) {
                     if (bus.getAsiento(numeroAsiento).getTipo() == TipoAsiento.SEMICAMA) {
                         b = SeatButton("/AsientoSemiCama.jpg");
+                    } else if (bus.getAsiento(numeroAsiento).getTipo() == TipoAsiento.CAMA) {
+                        b = SeatButton("/AsientoCama.jpg");
                     } else {
                         b = SeatButton("/AsientoNormal.jpg");
                     }
@@ -103,6 +122,12 @@ public class BusDisplay extends JPanel {
         repaint();
     }
 
+    /**
+     * Crea un botón de asiento
+     *
+     * @param imagePath Ruta de la imagen del asiento.
+     * @return JToggleButton configurado
+     */
     private JToggleButton SeatButton(String imagePath) {
         JToggleButton boton = new JToggleButton();
         boton.setContentAreaFilled(false);
@@ -114,10 +139,22 @@ public class BusDisplay extends JPanel {
         return boton;
     }
 
+    /**
+     * Getter de la matriz de botones de asientos.
+     *
+     * @return Matriz de JToggleButton que representa los botones de asientos.
+     */
     public JToggleButton[][] getSeatButtons() {
         return seatButtons;
     }
 
+    /**
+     * Calcula la posición del asiento en la lista de asientos.
+     *
+     * @param i Índice de fila.
+     * @param j Índice de columna.
+     * @return Posición del asiento en la lista de asientos.
+     */
     public int calcSeatPos(int i, int j) {
         if (j < 2) {
             return i * 4 + j;

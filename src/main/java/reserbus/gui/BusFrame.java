@@ -8,6 +8,11 @@ import java.awt.event.ActionListener;
 public class BusFrame extends JFrame {
     private BusGUI m;
     private Bus bus;
+    /**
+     * Constructor de la clase BusFrame.
+     *
+     * @param bus Objeto de la clase Bus asociado al marco.
+     */
     public BusFrame(Bus bus) {
         m = new BusGUI(this,bus);
         this.bus = bus;

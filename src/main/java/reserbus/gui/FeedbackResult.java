@@ -12,8 +12,9 @@ public class FeedbackResult extends JPanel {
     public FeedbackResult(FeedbackFrame f,Cliente c) {
         this.f = f;
         result = new JLabel("<html>Buen Viaje"+ c.getNombre() + "! Hemos enviado tu boleto a tu correo,<br>asegurate de imprimirlo o llevarlo en tu celular al abordar<br>Gracias por viajar con nosotros!</html>");
-        dates = new JLabel("Viajas el" );
+        dates = new JLabel("Viajas:" + c.getB().getFecha() );
         setLayout(new BorderLayout());
+        setBackground(new Color(147,236,134));
         JButton nuevaReserva = new JButton("Nueva Reserva");
         nuevaReserva.setPreferredSize(new Dimension(50,100));
         nuevaReserva.addActionListener(new ActionListener() {

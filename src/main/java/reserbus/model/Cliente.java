@@ -9,6 +9,7 @@ public class Cliente {
     private String pago;
     private Bus b;
     private Reserva r;
+    private String codigo;
     public Cliente(Bus b) {
         this.b = b;
         r = new Reserva(b);
@@ -69,6 +70,17 @@ public class Cliente {
     public Reserva getReserva() {
         return r;
     }
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public Bus getB() {
+        return b;
+    }
+
     public void setCliente(String n, String a, String c, String r, String t, String p) throws IllegalArgumentException {
         if (n == null || a == null || c == null || r == null || t == null || p == null) {
             throw new IllegalArgumentException("Error: Campo/os vacios.");

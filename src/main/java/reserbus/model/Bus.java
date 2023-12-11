@@ -36,9 +36,6 @@ public class Bus {
         this.lugarDestino = lugarDestino;
         this.horaInicio = horaInicio;
         this.horaDestino = horaDestino;
-        if(dosPisos) {
-            cantidadAsientos = cantidadAsientos*2; // pisos en ambas plantas del bus
-        }
         listaAsientos = new ArrayList<Asiento>();
         for(int i = 0; i<cantidadAsientos; i++) {
             if(i < 9) {

@@ -19,6 +19,9 @@ public class Reserva {
     public ArrayList<Asiento> getAsientos() {
         return asientos;
     }
+    public int getAsientosLength() {
+        return asientos.size();
+    }
     public void clear() {
         asientos.clear();
     }
