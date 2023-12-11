@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
+/**
+ * Clase que representa a un bus, posee información del viaje como los inicios y destinos, junto con los asientos y fechas.
+ */
 public class Bus {
     private ArrayList<Asiento> listaAsientos;
     private int cantidadAsientos;

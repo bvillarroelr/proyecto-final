@@ -11,7 +11,7 @@ public class FeedbackResult extends JPanel {
     private JLabel result,dates,businfo;
     public FeedbackResult(FeedbackFrame f,Cliente c) {
         this.f = f;
-        result = new JLabel("<html>Buen Viaje"+ c.getNombre() + "! Hemos enviado tu boleto a tu correo,<br>asegurate de imprimirlo o llevarlo en tu celular al abordar<br>Gracias por viajar con nosotros!</html>");
+        result = new JLabel("<html>Buen Viaje "+ c.getNombre() + "! Hemos enviado tu boleto a tu correo,<br>asegurate de imprimirlo o llevarlo en tu celular al abordar<br>Gracias por viajar con nosotros!</html>");
         dates = new JLabel("Viajas:" + c.getB().getFecha() );
         setLayout(new BorderLayout());
         setBackground(new Color(147,236,134));

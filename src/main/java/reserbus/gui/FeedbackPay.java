@@ -30,5 +30,6 @@ public class FeedbackPay extends JPanel {
         add(pagoFeed);
         add(boleta);
         add(reservasPanel);
+        setBackground(new Color(147,236,134));
     }
 }

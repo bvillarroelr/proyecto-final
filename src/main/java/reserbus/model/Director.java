@@ -3,6 +3,9 @@ package reserbus.model;
 import java.sql.Time;
 import java.util.Date;
 
+/**
+ * Clase directora encargada de indicar qué variante de bus se debe construir
+ */
 public class Director {
     // opción: hacer multiples construct de distintos buses, que varíen en fecha y hora del viaje (constructBusSimpleNoche, constructBusDosPisosDia, etc.)
 

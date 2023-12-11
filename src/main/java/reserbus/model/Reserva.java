@@ -2,6 +2,9 @@ package reserbus.model;
 
 import java.util.ArrayList;
 
+/**
+ * Clase reserva. Contiene todos los detalles de la reserva del cliente, tales como los asientos seleccionados, el viaje, y el precio total a pagar.
+ */
 public class Reserva {
     private Bus b;
     private ArrayList<Asiento> asientos;    // es un arraylist porque la reserva puede ser de múltiples asientos.
